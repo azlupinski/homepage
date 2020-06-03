@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+  <title>FL</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <header class="header">
+    <nav class="navigation">
+      <a href="index.html">Główna</a>
+      <a href="frontend-learn.html">Frontend-Notatki</a>
+      <a href="strony.html">Ciekawe Strony</a>
+      <a href="filmy.html">Ciekawe Filmy</a>
+    </nav>
+  </header>
+
+  <main class="main" id="top">
+    <header class="main__header">
+      <h1 class="main__heading">
+        Nauka Frontendu
+      </h1>
+    </header>
+    <section class="week">
+      <h2 class="week__heading">Tydzień II</h2>
+      <p class="week__short-description">
+        Podstawy HTML i CSS. Wprowadzenie do programowania i narzędzia deeveloperskie.
+      </p>
+      <section class="lesson">
+        <h3 class="lesson__heading">Cebula ma warstwy, ogry mają warstwy i strony internetowe też mają warstwy</h3>
+        <article class="single-issue">
+          <h4 class="single-issue__heading">Warstwa 0 - Treść</h4>
+          <p class="single-issue__content">
+            Najważniejsza z warstw - bez niej nie byłoby strony.
+          </p>
+        </article>
+        <article class="single-issue">
+          <h4 class="single-issue__heading">Warstwa 1 - Semantyka, czyli HTML</h4>
+          <p class="single-issue__content">
+            Ta warstwa opakowuje treść w znaczniki które coś oznaczają np. nagłówki.
+          </p>
+        </article>
+        <article class="single-issue">
+          <h4 class="single-issue__heading">Warstwa 2 - Prezentacja, czyli CSS</h4>
+          <p class="single-issue__content">
+            Warstwa nadająca wygląd warstwie Semantyki i Treści.
+          </p>
+        </article>
+        <article class="single-issue">
+          <h4 class="single-issue__heading">Warstwa 3 - Interakcja, czyli JS</h4>
+          <p class="single-issue__content">
+            Odpowiada na interakcję na stronie internetowje, umożliwia manipulowanie poniższymi warstwami.
+          </p>
+        </article>
+        <article class="single-issue">
+          <h4 class="single-issue__heading">Wizualizacja strony internetowej jako bloku</h4>
+          <p class="single-issue__content">
+            Na parterze mieszka treść, I piętro HTML, II piętro CSS, III piętro JS.<br>
+            Każde piętro może wpływać na te poniżej. Jednak to Treść jest podstawą i jest najważniejsza.<br>
+            Wszytkie operacje najlepiej wykonać na jak najniższym piętrze,<br>
+            czyli gdy możesz zrobić coś w css to nie rób tego w js.
+            <img class="single-issue__image" src="obrazki/strona-warstwy-blok.PNG"
+              alt="Reprezentacja warstw strony jako bloku mieszkalnego" />
+          </p>
+        </article>
+      </section>
+      <section class="lesson">
+        <h3 class="lesson__heading">HTML</h3>
+        <article class="single-issue">
+          <h4 class="single-issue__heading">Co to HTML?</h4>
+          <p class="single-issue__content">
+            HTML - HyperText Markup Language. Język znaczników opakowujący treść strony.
+          </p>
+        </article>
+        <article class="single-issue">
+          <h4 class="single-issue__heading">Czym w takim razie jest treść?</h4>
+          <p class="single-issue__content">
+            Treść to wszystko co przenosi informacje np:
+          </p>
+            <ul class="single-issue__list">
+              <li>Teksty</li>
+              <li>Nagłówki</li>
+              <li>Linki</li>
+              <li>Listy</li>
+              <li>Definicje</li>
+              <li>Obrazki</li>
+              <li>Video</li>
+              <li>Formularze</li>
+            </ul>
+        </article>
+        <article class="single-issue">
+          <h4 class="single-issue__heading">Jak wygląda znacznik (tag)?</h4>
+          <p class="single-issue__content">
+            Najlepiej (bo w kolorze) przedstawione jest to na poniższym screenie
+            <img class="single-issue__image" src="obrazki/znacznik.PNG" alt="Budowa znacznika" />
+          </p>
+        </article>
+        <article class="single-issue">
+          <h4 class="single-issue__heading">Co oznacza że coś jest Semantyczne?</h4>
+          <p class="single-issue__content">
+            Oznacza to że ma to jakieś znaczenie, dlatego często tagi HTML nazywane są znacznikami.
+          </p>
+        </article>
+        <article class="single-issue">
+          <h4 class="single-issue__heading">Jak utworzyć nowy czysty HTML?</h4>
+          <p class="single-issue__content">
+            Wciśnięcie <kdb>!</kdb> a następnie <kdb>Tab</kdb> powoduje utowrzeni szkieletu strony.<br>
+            Należy pamiętać o zmianie języka na pl - dzięki temu strona,<br>
+            będzie odczytywała się jako audio w języku polskim.
+          </p>
+        </article>
+        <article class="single-issue">
+          <h4 class="single-issue__heading">Jak zbudowany jest HTML?</h4>
+          <p class="single-issue__content">
+            Ma budowe przypominającą ludzkie ciało, jak na rysunku poniżej.
+            <img class="single-issue__image" src="obrazki/budowa-html.PNG" alt="Budowa html" />
+          </p>
+        </article>
+        <article class="single-issue">
+          <h4 class="single-issue__heading">Główne znaczniki w HTML?</h4>
+          <ul class="single-issue__list">
+            <li>&lt;main&gt; - Główna część dokumentu</li>
+            <li>&lt;section&gt; - Sekcje dokumentu</li>
+            <li>&lt;article&gt; - Sekcja która może istnieć samodzielnie, np </li>
+            <li>&lt;header&gt; - Nagłówek dokumentu, sekcji lub artykułu</li>
+            <li>&lt;footer&gt; - Stopka dokumentu, sekcji lub artykułu</li>
+            <li>&lt;h1-h6&gt; - Tekstowe nagłówki tytułowe dokumentu, sekcji lub artykułu</li>
+            <li>&lt;p&gt; - Paragraf, bądź akapit</li>
+          </ul>
+        </article>
+      </section>
+      <section class="lesson">
+        <h3 class="lesson__heading">CSS</h3>
+        <article class="single-issue">
+          <h4 class="single-issue__heading">Co to CSS?</h4>
+          <p class="single-issue__content">
+            CSS - Cascading Style Sheets, czyli kaskadowe arkusze stylów.
+            Odpowiadają one za prezentację naszej strony.
+          </p>
+        </article>
+        <article class="single-issue">
+          <h4 class="single-issue__heading">Na co wpływa CSS?</h4>
+          <p class="single-issue__content">
+            CSS wpływają nie tylko na wygląd elemenmtów HTML na ekranie,<br>
+            ale także na ich wygląd na wydrukach, czy czytnikach ekranowych.<br>
+            Pozwala on na dopasowanie wyglądu tych elementów na różnych urządzeniach.
+          </p>
+        </article>
+        <article class="single-issue">
+          <h4 class="single-issue__heading">Jak wygląda składnia CSS?</h4>
+          <p class="single-issue__content">
+            Składnia css to tzw. reguły, których budowę można zobaczyć poniżej.
+            <img class="single-issue__image" src="obrazki/budowa-reguly.PNG" alt="Budowa reguły" />
+          </p>
+        </article>
+        <article class="single-issue">
+          <h4 class="single-issue__heading">Jakie są sposoby stylownia?</h4>
+          <p class="single-issue__content">
+            Znacznik &lt;style&gt; w sekcji &lt;head&gt; (wpływa na strone ale nie jest widoczne w przeglądarce),<br>
+            tak jak na rysunku poniżej.
+            <img class="single-issue__image" src="obrazki/stylowanie-w-head.PNG"
+              alt="Przykład stylowania w znaczniku head" />
+          </p>
+          <p class="single-issue__content">
+            Atrybut &lt;style&gt; w znaczniku &lt;head&gt; (wpływa tylko na znacznik w którym jest umieszczony),<br>
+            tak jak na rysunku poniżej.
+            <img class="single-issue__image" src="obrazki/stylowanie-jako-atrybut.PNG"
+              alt="Przykład stylowania jako atrybut" />
+          </p>
+          <p class="single-issue__content">
+            Dołączenie pliku ze stylami css do strony,<br>
+            poprzez dodanie w znaczniku &lt;head&gt; linku z odniesiem do pliku,<br>
+            tak jak jest to przedstawione na ryskunku poniżej.<br>
+            <img class="single-issue__image" src="obrazki/stylowanie-w-oddzielnym-pliku.PNG"
+              alt="Przykład stylowania w oddzielnym pliku" /><br>
+            Poniżej przedstawiony jest screen z przykładową treścią takiego pliku.<br>
+            <img class="single-issue__image" src="obrazki/przykladowa-tresc-pliku-css.PNG"
+              alt="Przykładowa treść pliku css" />
+          </p>
+        </article>
+      </section>
+    </section>
+    <section class="week">
+      <h2 class="week__heading">Tydzień III</h2>
+      <p class="week__short-description">
+        Czym jest internet i przeglądarka. Dalsze zagadnienia z HTML i CSS oraz pierwsze kroki w JS.
+      </p>
+      <section class="lesson">
+        <h3 class="lesson__heading">HTML II</h3>
+        <article class="single-issue">
+          <h4 class="single-issue__heading">Nowe znaczniki!</h4>
+          <ul class="single-issue_list">
+            <li><a href="#tag-br">&lt;br&gt;</a></li>
+            <li><a href="#tag-b">&lt;b&gt;</a></li>
+            <li><a href="#tag-strong">&lt;strong&gt;</a></li>
+            <li><a href="#tag-i">&lt;i&gt;</a></li>
+            <li><a href="#tag-em">&lt;em&gt;</a></li>
+            <li><a href="#tag-a">&lt;a&gt;</a></li>
+            <li><a href="#tag-nav">&lt;nav&gt;</a></li>
+            <li><a href="#tag-img">&lt;img&gt;</a></li>
+          </ul>
+        </article>
+        <article class="single-issue" id="tag-br">
+          <h4 class="single-issue__heading">Znacznik &lt;br&gt;</h4>
+          <p class="single-issue__content">
+            Pozwala na złamanie tekstu, czyli przeniesienie go do następnej linii.
+          </p>
+        </article>
+        <article class="single-issue" id="tag-b">
+          <h4 class="single-issue__heading">Znacznik &lt;b&gt;</h4>
+          <p class="single-issue__content">
+            <b>Pogrubia</b> tekst, ale nie posiada żadnego znaczenia semantycznego.
+          </p>
+        </article>
+        <article class="single-issue" id="tag-strong">
+          <h4 class="single-issue__heading">Znacznik &lt;strong&gt;</h4>
+          <p class="single-issue__content">
+            <strong>Pogrubia</strong> tekst, a dodatkowo podkreśla wysoką istotność i
+            znaczenie frazy.
+          </p>
+        </article>
+        <article class="single-issue" id="tag-i">
+          <h4 class="single-issue__heading">Znacznik &lt;i&gt;</h4>
+          <p class="single-issue__content">
+            <i>Pochyla</i> tekst, ale nie posiada żadnego znaczenia semantycznego.
+          </p>
+        </article>
+        <article class="single-issue" id="tag-em">
+          <h4 class="single-issue__heading">Znacznik &lt;em&gt;</h4>
+          <p class="single-issue__content">
+            <em>Pochyla</em> tekst, ale też dodatkowo wskazuje iż treść może mieć inne znaczenie<br>
+            np. ironia
+          </p>
+        </article>
+        <article class="single-issue" id="tag-a">
+          <h4 class="single-issue__heading">Znacznik &lt;a&gt;</h4>
+          <p class="single-issue__content">
+            Znacznik linku/łącza wewnątrz dokumentu.<br>
+            Jego budowa jako linku przedstawiona jest na screenie poniżej<br>
+            <img class="single-issue__image" src="obrazki/znacznik-linku.PNG" alt="Znacznik linku"><br>
+            W atrybucie href podajemy adres do którego chcemy sie odwołać np.<br>
+            <img class="single-issue__image" src="obrazki/przyklad-linku.PNG" alt="Przykład linku"><br>
+            Natomiast jego budowa jako znacznik łącza wewnętrznego dokumentu<br>
+            wygląda tak samo z tą różnicą że w atrybucie href podajemy #idElementu np. tak jak na obrazku poniżej<br>
+            <img class="single-issue__image" src="obrazki/przyklad-lacza.PNG"
+              alt="Przykład łącza wewnętrznego dokumentu"><br>
+          </p>
+        </article>
+        <article class="single-issue" id="tag-nav">
+          <h4 class="single-issue__heading">Znacznik &lt;nav&gt;</h4>
+          <p class="single-issue__content">
+            Znacznik ten służy do navigacji.<br>
+            W tym znaczniku zamykamy nasze łącza lub linki odnoszące się do miejsc po których chcemy nawigować.<br>
+            Przykład poniżej.<br>
+            <img class="single-issue__image" src="obrazki/przyklad-nav.PNG"
+              alt="Przykład nawigacji pomiędzy podstronami strony">
+          </p>
+        </article>
+        <article class="single-issue" id="tag-img">
+          <h4 class="single-issue__heading">Znacznik &lt;img&gt;</h4>
+          <p class="single-issue__content">
+            Znacznik ten służy do dodawania do strony obrazków<br>
+            Przyjmuje on dwa atrybury "src" (source),<br>
+            czyli źródło pliku oraz "alt" (alternative), który zawiera tekstowy opis obrazka.<br>
+            <img class="single-issue__image" src="obrazki/znacznik-img.PNG" alt="Budowa znacznika img"><br>
+            <img class="single-issue__image" src="obrazki/przyklad-img.PNG" alt="Przykład użycia zniacznika img">
+          </p>
+        </article>
+        <article class="single-issue">
+          <h4 class="single-issue__heading">Co zrobić jeśli treść ma być często powtarzalna?</h4>
+          <p class="single-issue__content">
+            Treść taka <em>wyrzucamy</em> poza &lt;main&gt;. Np. navigacje czy stopkę. <br>
+            Wtedy tym wypadku czytniki ekranowe i algorytmy google nie analizują takie treści.<br>
+            <img class="single-issue__image" src="obrazki/przyklad-stopka.PNG"
+              alt="Przykład stopki jako treści powtarzalnej poza main">
+          </p>
+        </article>
+      </section>
+      <section class="lesson">
+        <h3 class="lesson__heading">O Kebabie, Wielbłądzie i Wężu</h3>
+        <article class="single-issue">
+          <h4 class="single-issue__heading">Jakie są konwencje nazewnictwa rzeczy w programowaniu?</h4>
+          <p class="single-issue__content">
+            Są 3 główne konwencje, każda z nich jest poprawna, <br>
+            ważna jest konsekwencja w stosowaniu wybranej konwencji. A są to:<br>
+          </p>
+          <ul class="single-issue_list">
+            <li>kebab-case - czyli człony nazwy oddzielane myślnikiem "-"</li>
+            <li>camelCase - czyli zapiswyanie kolejnych członów nazwy z dużej litery</li>
+            <li>snake_case - czyli człony nazwy oddzielane podkreśleniem "_"</li>
+          </ul>
+        </article>
+      </section>
+      <section class="lesson">
+        <h3 class="lesson__heading">CSS II</h3>
+        <article class="single-issue">
+          <h4 class="single-issue__heading">Prawdziwe selektory?</h4>
+          <p class="single-issue__content">
+            W CSS są 3 tzw. prwdziwe selektory, a są to :<br>
+          <ul>
+            <li><a href="#selector-element">h1 - element</a></li>
+            <li><a href="#selector-class">.h1 - klasa</a></li>
+            <li><a href="#selector-id">#h1 - id</a></li>
+          </ul>
+          </p>
+        </article>
+        <article id="selector-element" class="single-issue">
+          <h4 class="single-issue__heading">Selektor element</h4>
+          <p class="single-issue__content">
+            Selektor element wykorzystuje standardowe znaczniki HTML.<br>
+            Np. aby ostylować wszystkie elementy nagłówki o znaczniku h1, <br>
+            ustawiając kolor tekstu na niebieski, należałoby do arkusza stylów dodać <br>
+            następujący zapis.<br>
+            <img class="single-issue__image" src="obrazki/przyklad-selektor-element.PNG"
+              alt="Przykład selektora element">
+          </p>
+        </article>
+        <article id="selector-class" class="single-issue">
+          <h4 class="single-issue__heading">Selektor klasa</h4>
+          <p class="single-issue__content">
+            Selektor klasa wykorzystuje przypisane do elementów klasy<br>
+            Np. aby ostylować elementy posiadajce znacznik z przypisaną klasą "name", <br>
+            należałoby wykonać w akruszu stylów zapis jak na obrazku poniżej. (klasa to kropka .)<br>
+            <img class="single-issue__image" src="obrazki/przyklad-selektor-klasa.PNG" alt="Przykład selektora klasa">
+          </p>
+        </article>
+        <article id="selector-id" class="single-issue">
+          <h4 class="single-issue__heading">Selektor id</h4>
+          <p class="single-issue__content">
+            Selektor id wykorzystuje przypisane do elementu id. Przy czym warto zaznaczyć że o ile jedna klasa może być
+            przypisana do wielu elementów,<br>
+            to id jest wartością unikalną i nie może się powtarzać w obrębie strony<br>
+            Np. aby ostylować element posiadajce znacznik z przypisanym id "name", <br>
+            należałoby wykonać w akruszu stylów zapis jak na obrazku poniżej. (id to hash #)<br>
+            <img class="single-issue__image" src="obrazki/przyklad-selektor-id.PNG" alt="Przykład selektora id">
+          </p>
+        </article>
+        <article class="single-issue">
+          <h4 class="single-issue__heading">Jak łączyć selektory?</h4>
+          <p class="single-issue__content">
+            Najlepiej to zagadnienie wytłumaczyć na przykładzie.<br>
+            Załóżmy że chcemy aby wszystkie linki w &lt;nav&gt; były innego koloru niż pozostałe linki.<br>
+            Wtedy w arkuszu stylów należałoby użyć następującegfo łączenia selektorów:<br>
+            <img class="single-issue__image" src="obrazki/przyklad-laczenie-selektorow.PNG"
+              alt="Przykład łączenia selektorów">
+          </p>
+        </article>
+        <article class="single-issue">
+          <h4 class="single-issue__heading">Czym jest !important?</h4>
+          <p class="single-issue__content">
+            To jest dramat i nie powinno się tego używać.<br>
+            Powoduje ignorowanie właściwości oznaczonej important<br>
+            w późniejszych odniesieniach przy stylowaniu danego elementu.<br>
+            Np. w poniższym przykładzie wszystkie linki będą miały kolor pomarańczowy,<br>
+            pomimo tego że po selektorze a występuje selektor łączony mający wyższy priorytet.<br>
+            <img class="single-issue__image" src="obrazki/przyklad-important.PNG" alt="Przykład !important">
+          </p>
+        </article>
+        <article class="single-issue">
+          <h4 class="single-issue__heading">Czym jest specyficzność w CSS?</h4>
+          <p class="single-issue__content">
+            To jest trochę jak tabela medalowa - największy mnożnik mają złote medale,<br>
+            później srebrne, a później brązowe.<br>
+            <img class="single-issue__image" src="obrazki/tabela-medalowa.PNG" alt="Tabela medalowa"><br>
+            W stylowaniu css odpowiednikiem medali są kolejno od złotego do brązowego:<br>
+            id (#name), klasa (.name) oraz element (h1). Poniżej Na rysunku widoczne jest jeszcze !important<br>
+            oraz stylowanie liniowe (atrybut "style" w znaczniku) - lecz są top elementy które są bardzo rzadko
+            używane.<br>
+            <img class="single-issue__image" src="obrazki/oznaczenia-specyficznosci-w-css.PNG"
+              alt="Oznaczenia secyficzności w css"><br>
+            <img class="single-issue__image" src="obrazki/przyklad-specyficznosc.PNG" alt="Przykład specyficzności"><br>
+            <img class="single-issue__image" src="obrazki/przyklad-specyficznosc-2.PNG"
+              alt="Przykład specyficzności 2"><br>
+          </p>
+        </article>
+        <article class="single-issue">
+          <h4 class="single-issue__heading">Co jeśli specyficzność jest równa?</h4>
+          <p class="single-issue__content">
+            Wtedy pierszeństwo ma selektor który jest bliżej elementu (wizualnie to niżej w arkuszu stylów)<br>
+            To tak jakbyśmy wpisali treść arkusza w head, dlatego można powiedzieć że jest <em>bliżej</em>.<br>
+          </p>
+        </article>
+        <article class="single-issue">
+          <h4 class="single-issue__heading">Dobra praktyka używania selektorów?</h4>
+          <p class="single-issue__content">
+            Dobrą praktyką jest nadawać klasy każdemu elementowi i unikać zagnieżdżeń, tyle.
+          </p>
+        </article>
+        <article class="single-issue">
+          <h4 class="single-issue__heading">Jak nazywać klasy?</h4>
+          <p class="single-issue__content">
+          <ul>
+            <li>Najlepiej pojedyńcze słowa po angielsku</li>
+            <li>Nazwa rzeczy powinna odpowiadać jego funkcji na stronie</li>
+            <li>Nazwy klas zawsze z małej litery</li>
+            <li>Nie zaczynać od cyfr</li>
+            <li>Pryz dwóch słowach w nazwie używać kebab-case</li>
+            <li>Starać sie aby każdy element miał jedną klasę,<br>
+              nie zwiększać specyficzności bez potrzeby</li>
+          </ul>
+          </p>
+        </article>
+      </section>
+      <section class="lesson">
+        <h3 class="lesson__heading">Jak działa przeglądarka i internet?</h3>
+        <article class="single-issue">
+          <h4 class="single-issue__heading">Co to HTTP?</h4>
+          <p class="single-issue__content">
+            HTTP - HyperText Transfer Protocol, to protokół z któego w 99% korzysta przeglądarka aby pobrać i następnie
+            wyświetlć zawartości stron internetowych.<br>
+            HTTPS - HyperText Transfer Protocol Secure, to samo co HTTP tyle, że dodatkowo jest on szyfrowany
+            (bezpieczny).
+          </p>
+        </article>
+        <article class="single-issue">
+          <h4 class="single-issue__heading">Co to URL?</h4>
+          <p class="single-issue__content">
+            URL - Uniform Resource Locator, czyli tak naprawdę adres gdzie znajduje się zawarość strony.<br>
+            Jego budowe przedstawia screen poniżej.<br>
+            <img class="single-issue__image" src="obrazki/budowa-url.PNG" alt="Budowa url">
+          </p>
+        </article>
+        <article class="single-issue">
+          <h4 class="single-issue__heading">Jak działa wyświetlanie stron użytkownikowi?</h4>
+          <p class="single-issue__content">
+            W tym wypadku flow najlepiej podsumowuje obrazek poniżęj.<br>
+            <img class="single-issue__image" src="obrazki/flow-wyswietlanie-strony.PNG" alt="Flow wyświetlania strony">
+          </p>
+        </article>
+        <article class="single-issue">
+          <h4 class="single-issue__heading">Jak działa wyświetlanie stron użytkownikowi (ruch sieciowy)?</h4>
+          <p class="single-issue__content">
+            W tym wypadku flow najlepiej podsumowuje obrazek poniżęj.<br>
+            <img class="single-issue__image" src="obrazki/flow-wyswietlanie-strony.PNG" alt="Flow wyświetlania strony">
+          </p>
+        </article>
+        <article class="single-issue">
+          <h4 class="single-issue__heading">Jak podglądać ruch sieciowy?</h4>
+          <p class="single-issue__content">
+            Uruchomić narzędzie developerskie w przeglądarce, a nastpnie zakładke network.<br>
+            Po odściwżeniu strony widać wszystkie pobierane elementy strony.<br>
+            Najpierw pobiera się html, pozniej fonty z google, css strony, zdjęcia itd.<br>
+            <img class="single-issue__image" src="obrazki/przyklad-ukazania-ruchu-sieciowego.PNG"
+              alt="Przykład ruch sieciowy">
+          </p>
+        </article>
+        <article class="single-issue">
+          <h4 class="single-issue__heading">Jakie są kody odpowiedzi HTTP i co oznaczają?</h4>
+          <p class="single-issue__content">
+            <img class="single-issue__image" src="obrazki/kody-odpowiedz-serwera.PNG" alt="Kody odpowiedzi serwera">
+          </p>
+        </article>
+        <article class="single-issue">
+          <h4 class="single-issue__heading">Czym jest root "/"?</h4>
+          <p class="single-issue__content">
+            Root wskazuje miejsce w którym przeglądarka powinna szukać zasobu.<br>
+            Tak więc w przykłądzie na u dołu gdy podamy w źródle obrazka root "/"<br>
+            zastosowana zostanie ścieżka bezwzględna do zasobów i przeglądarka będzie szukała pod prawidłowym
+            adresem,<br>
+            natomiast gdy go dnie dodamy, czyli podamy ścieżkę względną,<br>
+            to przeglądarka zwyczajnie doklei źródło do obecnego URL i tam będzie szukała zasobu.<br>
+            <img class="single-issue__image" src="obrazki/jak-dziala-root.PNG" alt="Przykład jak działa root">
+          </p>
+        </article>
+      </section>
+      <section class="lesson">
+        <h3 class="lesson__heading">JS</h3>
+        <article class="single-issue">
+          <h4 class="single-issue__heading">Czym są wartości w JS?</h4>
+          <p class="single-issue__content">
+            Wartości w JS są tym czym są liczby w matematyce - zbiór istniejących już elementów, które
+            wykorzystujemy.<br>
+            Są one też nie zmienne bo 2 to 2 a nie 6, 2!=6.
+          </p>
+        </article>
+        <article class="single-issue">
+          <h4 class="single-issue__heading">Jak zaimplementować kod JS?</h4>
+          <p class="single-issue__content">
+            Na samym dole body (tuż przez zamknięciem znacznika body)<br>
+            w znaczniku &lt;script&gt;, jak na obrazku poniżej <br>
+            <img class="single-issue__image" src="obrazki/przyklad-znacznik-script.PNG" alt="Przykład znacznik script">
+            Lub (bardziej poprawna forma) poprzez zaimplementowanie pliku<br>
+            z kodem na naszą stronę (podobnie jak w css),<br>
+            również tuż przez zamknięciem znacznika body.<br>
+            <img class="single-issue__image" src="obrazki/przyklad-implementacja-js-oddzielny-plik.PNG"
+              alt="Przykład implementacja kodu js w oddzielnym pliku">
+          </p>
+        </article>
+        <article class="single-issue">
+          <h4 class="single-issue__heading">Co mi daje console.log()?</h4>
+          <p class="single-issue__content">
+            Polecenie console.log() pozwala nam wyświetlić w konsoli devtools,<br>
+            podany w parametrze tekst np.
+            <img class="single-issue__image" src="obrazki/consolelog-kod.PNG" alt="Przykładowy kod console log"><br>
+            <img class="single-issue__image" src="obrazki/consolelog-wynik.PNG" alt="Przykładowy wynik console log"><br>
+            Console log czesto używany jest do sprawdzania działania kodu,<br>
+            poprzez zwracanie odpowiednich elementów podczas działania strony.
+          </p>
+        </article>
+        <article class="single-issue">
+          <h4 class="single-issue__heading">Czym są zmienne w JS?</h4>
+          <p class="single-issue__content">
+            To pewnego rodzaju połączenie między nazwą której chcemy użyć, a wartością.<br>
+            W tym wypadku zmienna 'name' wskazuje an wartość 'Adam', a 'age' wskazuje na wartość 27<br>
+            <img class="single-issue__image" src="obrazki/przyklad-zmienna-const.PNG" alt="Przykład zmiennej const">
+          </p>
+        </article>
+        <article class="single-issue">
+          <h4 class="single-issue__heading">Czym jest backtick/backquote "`" w JS?</h4>
+          <p class="single-issue__content">
+            Rozpoczyna i kończy literał - który jest tekstem zawierającym zmienne.<br>
+            Do zmiennych zostaną podstawione wartości do których łączeniem są zmienne.<br>
+            <img class="single-issue__image" src="obrazki/przyklad-backtick.PNG" alt="Przykład backtick">
+          </p>
+        </article>
+        <article class="single-issue">
+          <h4 class="single-issue__heading">Najważniejsze komendy w terminalu.</h4>
+          <p class="single-issue__content">
+            <img class="single-issue__image" src="obrazki/komendy-terminal-linux.PNG"
+              alt="Najważniejsze komendy w terminalu - Linux">
+            <img class="single-issue__image" src="obrazki/komendy-terminal-windows.PNG"
+              alt="Najważniejsze komendy w terminalu - Windows">
+          </p>
+        </article>
+      </section>
+    </section>
+    <section class="week">
+      <h2 class="week__heading">Tydzień IV</h2>
+      <p class="week__short-description">
+        Czym jest DOM? Co to takiego BoxModel? Jakie są podstawowe typy w JS? Jest GIT?
+      </p>
+      <section class="lesson">
+        <h3 class="lesson__heading">GIT</h3>
+        <article class="single-issue">
+          <h4 class="single-issue__heading">Podstawowe komendy</h4>
+          <ul class="single-issue_list">
+            <li>git config --global user.name "user name"  - ustawia globalnie nazwę użytkownika</li>
+            <li>git config --global user.email "email adress"  - ustawia globalnie adres email użytkownika</li> 
+            <li>git config --get user.email - wypisuje ustawiony adres email użytkownika</li> 
+            <li>git config --get user.name - wypisuje ustawioną nazwę użytkownika</li> 
+            <li>git init - wywo łane w katalogu projektu, tworzy czyste repozytorium</li>
+          </ul>
+        </article>
+        </section>
+    </section>
+  </main>
+  <footer class="footer">
+    Strona jest efektem potrzeby ćwiczenia frontendu w kursie <a href="https://cotenfrontend.pl/">"WTF:Co ten
+      frontend?"</a>. <a href="#top">Wróć na górę strony.</a>
+  </footer>
+
+  <script src="main.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,114 @@
+body{
+    background-position: center;
+    text-align: center;
+    background-size: cover;
+}
+
+nav a{
+    color: white;
+}
+
+.header{
+    
+}
+
+.main{
+
+}
+
+.main__header{
+    font-style: italic, bold;
+}
+
+.main__heading{
+    font-style: italic, bold;
+} 
+
+.article-header{
+    font-style: italic;
+}
+
+.navigation{
+    background-color: green;
+    border-radius: 5px;
+}
+
+.about{
+
+}
+
+.about__heading{
+
+}
+
+.about__description{
+
+}
+
+.week{
+
+}
+
+.week__heading{
+
+}
+
+.week__short-description{
+
+}
+
+.lesson{
+
+}
+
+.lesson__heading{
+
+}
+
+.single-issue{
+
+}
+
+.single-issue__heading{
+
+}
+
+.single-issue__content{
+
+}
+
+.single-issue__image{
+    max-width: 600px;
+    max-height: 400px;
+}
+
+.single-issue__link{
+
+}
+
+.footer{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.date{
+    font-size: smaller;
+    position: relative;
+    float: right;
+}
+
+.vertical-image{
+    height: 600px;
+    width: auto;
+}
+
+.horizontal-image{
+    height: 300px;
+    width: auto;
+}
+
+.square-image{
+    height: 400px;
+    width: auto;
+}
+
