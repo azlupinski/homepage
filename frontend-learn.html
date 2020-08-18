@@ -541,10 +541,81 @@
             <li>git config --global user.email "email adress"  - ustawia globalnie adres email użytkownika</li> 
             <li>git config --get user.email - wypisuje ustawiony adres email użytkownika</li> 
             <li>git config --get user.name - wypisuje ustawioną nazwę użytkownika</li> 
-            <li>git init - wywo łane w katalogu projektu, tworzy czyste repozytorium</li>
+            <li>git init - wywołane w katalogu projektu, tworzy czyste repozytorium</li>
+            <li>git add . - dodaje wszystkie pliki znajdujące się w katalogu do śledzenia</li>
+            <li>git status - wypisuje śledzone i nie śledzone pliki, pokazuje ostatni commit i daje informacje o dokonanych zmianach</li>
+            <li>git commit -m "message" - zapisuje dodkonane zmiany przyrostowo, w "message" opisujemy co sie zmieniło</li>
+            <li>gitk - pokazuje commity i zmiany w nich dokonane</li>
+            <li>git push - wypushowuje commity do remota</li>
           </ul>
         </article>
+        <article class="single-issue">
+          <h4 class="single-issue__heading">W jakich plikach git śledzi zmiany?</h4>
+          <p class="single-issue__content">
+            Git śledzi zmiany w plikach tekstowych, natomiast wszelkie zmiany obrazkach uznaje jako nowy obraz i nadpisuje stary.<br>
+            Przy plikach office sytuacja jest analogiczna co do obrazów.
+          </p>
+        </article>
+        <article class="single-issue">
+          <h4 class="single-issue__heading">Co po założeniu repo na gicie?</h4>
+          <p class="single-issue__content">
+            Mamy w takim wypadku 3 opcje przedstawione poniżej.<br>
+            <img class="singel-issue__image" src="obrazki/komendy-git-po-zalozeniu-repo.PNG" alt="Komendy po załozeniu repo">
+          </p>
+        </article>
         </section>
+        <section class="lesson">
+          <h3 class="lesson__heading">Życie w puudełku - box model</h3>
+          <article class="single-issue">
+            <h4 class="single-issue__heading">Znacznik &lt;div&gt;</h4>
+            <p class="single-issue__content">
+              Znacznik ten nie ma znaczenia semantyczngeo, a używany jest gdy chcemy opakować coś do czego nie istnieje odpowiedni semantyczny znacznik.
+            </p>
+          </article>
+          <article class="single-issue">
+            <h4 class="single-issue__heading">Własność "display"</h4>
+            <p class="single-issue__content">
+              Element z własnością display: block, zajmuje całą szerokość okna przeglądarki. Powoduje to elementy z tą własnością ukłądają się jeden pod drugim. <br>
+              <img class="single-issue__image" src="obrazki/display-block-przyklad.PNG" alt="Przykład zastosowania elementów blokowych"><br>
+              Elementy z własnością display: inline, są to tak zwane elementy liniowe. Elementy te usawiają sie obok siebie<br>
+              <img class="single-issue__image" src="obrazki/display-inline-przyklad.PNG" alt="Przykład zastosowania elementów liniowych"><br>
+              Są jeszcze elementy z własnością display: inline-block. Zachowuje się jak element z własnością inline,<br>
+              jednak można mu nadawać własności odpowiedniue dla własności blokowych.<br>
+              <img class="single-issue__image" src="obrazki/display-inline-block-przyklad.PNG" alt="Przykład zastosowania elementów inline-block">
+            </p>
+          </article>
+          <article class="single-issue">
+            <h4 class="single-issue__heading">Width/height vs max/min-width/ i max/min-height</h4>
+            <p class="single-issue__content">
+              Własności width i height nadają na sztywno (element zawsze będzie miał taki rozmiar)<br>
+              elementom blokowym szertokość i wysokość. Przykład widać na obrazku powyżej.<br>
+              Własności max/min-width i max/min-height nadają elementom maksymalne wartości własności width i height,<br>
+              przez co np. przy max-width: 600px, element będzie miał maksymalnie szerokość 600px ale może też mieć mniej. Przykład poniżej.<br> 
+              <img class="single-issue__image" src="obrazki/max-width-przyklad_1.PNG" alt="Przykład mniejsze max-width"><br>
+              <img class="single-issue__image" src="obrazki/max-width-przyklad_2.PNG" alt="Przykład większe max-width">
+            </p>
+          </article>
+          <article class="single-issue">
+            <h4 class="single-issue__heading">Własność overflow</h4>
+            <p class="single-issue__content">
+              Pozwala na "odcięcie" treści wystającej poza element w którym jest umieszczona poprzez ustawienie wartości na hidden. <br>
+              Działa zarówno w pionie jak i w poziomie.<br>
+              <img class="single-issue__image" src="obrazki/przyklad-bez-overflow.PNG" alt="Przykład bez overflow hidden"><br>
+              <img class="single-issue__image" src="obrazki/przyklad-overflow-hidden.PNG" alt="Przykład overflow hidden"><br>
+              Wartość overfow: visible jest domyślną wartością tej własności.
+              Jest jeszcze wartość overflow: auto która, jeśli element wewnętrzny wystaje poza element zewnętrzny,<br>
+              dodaje scroll w elemencie zewnętrznym tak aby element wewnętrzny wyświetlał się w całości i z niego  nie wystałwał.
+            </p>
+          </article>
+          <article class="single-issue">
+            <h4 class="single-issue__heading">Własność padding</h4>
+            <p class="single-issue__content">
+              Padding - czyli margines wewnętrzny elementu, odpowiada za to o ile oddalone będą elementy znajdujące się w elemencie którego dotyczy padding.<br>
+              <img class="single-isuue__image" src="obrazki/padding-przyklad.PNG" alt="Przykład paddingu"><br>
+              <img class="single-isuue__image" src="obrazki/zapisy-paddingu.PNG" alt="Sposoby zapisu paddingu"><br>
+            </p>
+          </article>
+          </section>
     </section>
   </main>
   <footer class="footer">
