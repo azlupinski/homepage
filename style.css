@@ -66,7 +66,11 @@ nav a{
 }
 
 .single-issue{
-
+    border-width: 5px;
+    border-color: brown;
+    border-style: groove;
+    border-radius: 25px;
+    margin: 5vh;
 }
 
 .single-issue__heading{
@@ -80,6 +84,8 @@ nav a{
 .single-issue__image{
     max-width: 600px;
     max-height: 400px;
+    border-style: hidden;
+    border-radius: 25px;
 }
 
 .single-issue__link{
